@@ -1,0 +1,34 @@
+.container {
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/218.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: var(--color-white);
+        text-align: center;
+        background-color: var(--color-primary);
+    }
+
+    .content {
+        position: relative;
+        top: 50px;
+        height: calc(100vh - 120px);
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
