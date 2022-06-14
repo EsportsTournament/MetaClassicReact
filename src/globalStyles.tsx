@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 body,html {
