@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import "./Header.scss";
-import bgImg from "../../assets/images/logo.png";
+import bgImg from "../../assets/images/logo2.png";
 const Header: FC = () => {
   const appName = "Meta Esports";
 
