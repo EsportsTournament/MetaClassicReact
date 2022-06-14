@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import "./App.scss";
-import Header from "./Components/Header/Header";
-import Menubar from "./Components/Menubar/Menubar";
+import Header from "./components/Header/Header";
+import Menubar from "./components/Menubar/Menubar";
 import { GlobalStyle } from "./globalStyles";
 
 function App() {
