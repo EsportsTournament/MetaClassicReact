@@ -1,0 +1,42 @@
+.menubar {
+  width: 100%;
+  bottom: 0;
+  background-color: rgb(34, 193, 185);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-btn {
+  background: transparent;
+  width: 10%;
+  border-color: transparent;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  line-height: 1;
+  color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-bottom: 10px;
+  word-break: break-word;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.active-nav,
+.nav-btn:hover {
+  background: #abe9f0;
+  color: black;
+  svg {
+    color: rgb(21, 9, 112);
+  }
+}
+
+svg {
+  width: 100%;
+  font-size: 40px;
+  margin-top: 2px;
+}
