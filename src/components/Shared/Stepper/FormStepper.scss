@@ -1,10 +1,47 @@
-.App-header {
-  text-align: center;
+.dot {
+  height: 75px;
+  width: 75px;
+  background-color: rgb(12, 47, 245);
+  border-radius: 50%;
+  display: inline-block;
+  padding-top: 44px;
+  padding-left: 42px;
+  margin-left: 50px;
+  text-align: inherit;
 }
-.center-stepper {
-  margin-left: 500px;
-  width: 100%;
+.card {
+  padding: 1.5em 0.5em 0.5em;
+  border-radius: 2em;
+  text-align: inherit !important;
+  box-shadow: 0 5px 10px rgba(172, 20, 20, 0.2);
+  background-color: aquamarine;
 }
-.MuiPaper-root {
-  width: 26% !important;
+.card-title {
+  color: #ffffff;
+}
+.input {
+  border-radius: 2em;
+  background-color: rgb(196, 247, 247);
+  color: #ffffff;
+  padding: 0.5em 1.5em;
+  margin-left: 8px;
+}
+input1 {
+  border-radius: 2em;
+  background-color: rgb(15, 206, 206);
+  color: #ffffff;
+  padding: 0.5em 1.5em;
+  margin-top: -66px;
+  margin-left: 14px;
+}
+.step2 {
+  padding-left: 42px;
+  color: #ffffff;
+}
+// .MuiBox-root MuiBox-root-2 {
+//   height: 600px;
+//   width: 400px;
+// }
+.MuiCollapse-wrapperInner {
+  width: 20% !important;
 }
