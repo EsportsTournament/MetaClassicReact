@@ -18,29 +18,38 @@ const steps = [
       <div className="row">
         <div className="col-6">
           <div>
-            <div className="crad-body">
+            <div className="card-body">
               <div className="card-title">Individual Registration</div>
-              <p className="card-text">
-                <label>Name:</label>
-                <br />
-                <input type="text" className="input" placeholder="UserName" />
-                <br />
-                <label>Email:</label>
-                <br />
-                <input
-                  type="text"
-                  className="input"
-                  placeholder="urmail@mail.com"
-                />
-                <br />
-                <label>COD ID:</label>
-                <br />
-                <input type="text" className="input" placeholder="4884884848" />
-                <br />
-                <label>COD NAME:</label>
-                <br />
-                <input type="text" className="input" placeholder="ME_LUCIFER" />
-              </p>
+              <div className="card-description">
+                <div className="input-field">
+                  <label>Name:</label>
+                  <input type="text" className="input" placeholder="UserName" />
+                </div>
+                <div className="input-field">
+                  <label>Email:</label>
+                  <input
+                    type="text"
+                    className="input"
+                    placeholder="urmail@mail.com"
+                  />
+                </div>
+                <div className="input-field">
+                  <label>COD ID:</label>
+                  <input
+                    type="text"
+                    className="input"
+                    placeholder="4884884848"
+                  />
+                </div>
+                <div className="input-field">
+                  <label>COD Name:</label>
+                  <input
+                    type="text"
+                    className="input"
+                    placeholder="ME_LUCIFER"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -54,13 +63,18 @@ const steps = [
         <div className="col-6">
           <div>
             <div className="card-body">
-              <h5 className="card-title">Subscribe to creator channels:</h5>
-              <span className="dot">
-                &nbsp;&nbsp;&nbsp;My
-                <br />
-                Youtube <br />
-                Channel
-              </span>
+              <div className="card-title center">
+                Subscribe to creator channels:
+              </div>
+              <div className="card-description center">
+                {/* <span className="dot">
+                  &nbsp;&nbsp;&nbsp;My
+                  <br />
+                  Youtube <br />
+                  Channel
+                </span> */}
+                <div className="circle">My Youtube Channel</div>
+              </div>
             </div>
             <span className="step2">My Youtube Channel</span>
           </div>
