@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-// import FormStepper from "./components/Shared/Stepper/FormStepper";
-// import { StepContext } from "./components/Shared/Stepper/StepContext";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
@@ -10,10 +8,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    {/* <StepContext> */}
     <App />
-    {/* <FormStepper /> */}
-    {/* </StepContext> */}
   </React.StrictMode>
 );
 
