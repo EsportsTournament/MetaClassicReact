@@ -5,6 +5,7 @@ import Menubar from "./components/Menubar/Menubar";
 import RouterComp from "./components/Router";
 import { GlobalStyle } from "./globalStyles";
 import { BrowserRouter as Router } from "react-router-dom";
+import FormStepper from "./components/Shared/Stepper/FormStepper";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           </div>
           <div className="content">
             <RouterComp />
+            <FormStepper />
           </div>
           <div className="footer">
             <Menubar />
