@@ -1,12 +1,9 @@
 .container {
-    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/218.jpg');
     height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     padding-right: 0;
     padding-left: 0;
+    background-color: var(--color-secondary);
 
     .header {
         position: fixed;

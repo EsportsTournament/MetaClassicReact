@@ -1,9 +1,10 @@
 import React from "react";
+import FormStepper from "../../Shared/Stepper/FormStepper";
 
 const Support = () => {
   return (
     <>
-      <div>Support works</div>
+      <FormStepper />
     </>
   );
 };
