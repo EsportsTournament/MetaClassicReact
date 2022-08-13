@@ -13,11 +13,8 @@
         font-size: 3rem;
         font-weight: bold;
         text-transform: uppercase;
-        -webkit-text-stroke-width: 1px;
         letter-spacing: 1px;
-        -webkit-text-stroke-color: var(--color-complementary);
-        color: var(--color-white);
-        text-shadow: 2px 2px var(--color-secondary);
+        color: var(--color-black);
     }
 
     .login {
