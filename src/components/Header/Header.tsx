@@ -30,18 +30,20 @@ const Header: FC = () => {
   }
 
   useEffect(() => {
-    getLoginURL();
-    getMe();
+    // getLoginURL();
+    // getMe();
   }, []);
 
   return (
     <div className="header" data-testid="Header">
-      <img className="logo" src={bgImg} alt="Logo" />
+      <div>
+        <img className="logo" src={bgImg} alt="Logo" />
+      </div>
       <div className="title">{appName}</div>
       <div className="login">
-        {me.picture ? 
-        (<img className="profileImage" src={me.picture} alt="profile image" />):
-        (<RiAccountCircleFill />) }
+        {me.picture ?
+          (<img className="profileImage" src={me.picture} alt="profile image" />) :
+          (<RiAccountCircleFill />)}
         {me.name ? (<div className="userName">{me.name}</div>) : <a href={loginURL}>
           LOGIN
         </a>}

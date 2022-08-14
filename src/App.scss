@@ -1,31 +1,32 @@
-.container {
-    height: 100vh;
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-    background-color: var(--color-secondary);
+@media (max-width: 450px) {
 
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
+.mt-app-container {
+    overflow-x: hidden;
+    background-color: var(--color-secondary);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .mt-app-header {
         width: 100%;
         color: var(--color-white);
-        text-align: center;
         background-color: var(--color-primary);
+        height: 54px;
     }
 
-    .content {
-        position: relative;
-        top: 70px;
-        height: calc(100vh - 120px);
+    .mt-app-content {
+        z-index: 1;
+        top: 54px;
+        overflow-y: auto;
     }
 
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
+    .mt-app-footer {
+        max-height: 6em;
+        max-width: 450px;
         width: 100%;
-        text-align: center;
+        height: 54px;
     }
+}
+
 }

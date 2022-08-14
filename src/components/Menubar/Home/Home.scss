@@ -1,0 +1,122 @@
+.homePage {
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/218.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @mixin glass {
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .gameList {
+        display: flex;
+        justify-content: space-evenly;
+
+        .gameName {
+            padding: var(--padding);
+            text-align: center;
+            font-size: 16px;
+            padding: 6px 10px;
+            width: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--color-black);
+            border-left: var(--border);
+            border-right: var(--border);
+            background-color: var(--color-white);
+        }
+
+        .active {
+            color: var(--color-white);
+            background-color: var(--color-black);
+            text-decoration: underline;
+        }
+    }
+
+
+    .mt-card {
+        @include glass;
+        // margin: var(--padding);
+        padding: var(--padding);
+        transition: 0.3s;
+        border-radius: var(--border-radius);
+
+        .mt-cardTitle {
+            // margin: var(--padding);
+            color: var(--color-black);
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 20px;
+        }
+
+        .mt-cardBody {
+            padding: var(--padding);
+            border-top: var(--border);
+
+
+            .mt-cardValues {
+                display: flex;
+                justify-content: space-between;
+                padding: var(--padding);
+                font-size: 16px;
+                color: var(--color-secondary);
+
+                .mt-cardValue {
+                    font-weight: bold;
+                }
+
+                .mt-button {
+                    background-color: var(--color-secondary);
+                    border: none;
+                    padding: var(--padding);
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    border-radius: var(--border-radius);
+                    font-size: 16px;
+                }
+            }
+
+            .mt-cardChips {
+                display: flex;
+                flex-wrap: wrap;
+
+                .mt-chip {
+                    margin: var(--padding);
+                    display: inline-block;
+                    color: var(--color-white);
+                    padding: 0 25px;
+                    height: 50px;
+                    font-size: 16px;
+                    line-height: 50px;
+                    border-radius: 25px;
+                    background-color: var(--color-complementary);
+                }
+            }
+        }
+    }
+
+    .titlePlayer {
+        margin: var(--padding);
+        padding: var(--padding);
+        background-color: var(--color-primary);
+        border-radius: var(--border-radius);
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 20px;
+        color: var(--color-black);
+    }
+
+    .playerGrid {
+        display: grid;
+        gap: 0;
+        grid-template-columns: auto auto;
+    }
+}

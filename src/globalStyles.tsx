@@ -14,10 +14,11 @@ body,html {
     --padding: 6px 10px;
     --border: 2px solid var(--color-secondary);
 }
-* {
-    box-sizing: border-box;
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
 `;

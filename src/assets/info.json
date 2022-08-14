@@ -1,0 +1,154 @@
+{
+    "games": [
+        {
+            "name": "BGMI",
+            "fullName": "Battle Grounds Mobile India",
+            "clans": [
+                {
+                    "clanName": "MetaEsports",
+                    "clanId": "",
+                    "clanAlias": "META",
+                    "clanLevel": 5,
+                    "discord": "https://discord.gg/NdHgTtddms"
+                }
+            ],
+            "playerList": [
+                {
+                    "name": "Lucifer",
+                    "ign": "MEメLuCifeR",
+                    "playerId": "5117230531",
+                    "clanRole": "Leader",
+                    "image": "",
+                    "tags": [
+                        "Mid Range",
+                        "Support",
+                        "Team Player"
+                    ],
+                    "social": [
+                        {
+                            "platform": "youtube",
+                            "link": "https://www.youtube.com/channel/UCvH8fSi7W498b5bu_6yaF1w",
+                            "name": "META Classic"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cranky",
+                    "ign": "CrankgamingYT",
+                    "playerId": "5366886595",
+                    "clanRole": "CoLeader",
+                    "image": "",
+                    "tags": [
+                        "Close Range",
+                        "Sharp Shooter",
+                        "Team Player"
+                    ],
+                    "social": [
+                        {
+                            "platform": "youtube",
+                            "link": "https://www.youtube.com/channel/UCJ2tGQAyeWDopEMA0iAVSRQ",
+                            "name": "Crank Gaming"
+                        }
+                    ]
+                },
+                {
+                    "name": "Rajjo",
+                    "ign": "MEメKinG",
+                    "playerId": "5720560541",
+                    "clanRole": "CoLeader",
+                    "image": "",
+                    "tags": [
+                        "Mid Range",
+                        "Sniper",
+                        "Team Player"
+                    ],
+                    "social": [
+                        {
+                            "platform": "instagram",
+                            "link": "https://instagram.com/rajjoogaming?igshid=YmMyMTA2M2Y=",
+                            "name": "rajjogaming"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bluffer",
+                    "ign": "MEメBluffeR",
+                    "playerId": "5265167380",
+                    "clanRole": "CoLeader",
+                    "image": "",
+                    "tags": [
+                        "Mid Range",
+                        "Sniper",
+                        "Support"
+                    ],
+                    "social": []
+                }
+            ]
+        },
+        {
+            "name": "COC",
+            "fullName": "Clash Of Clans",
+            "clans": [
+                {
+                    "clanName": "The Gaurdions",
+                    "clanId": "#Y9PGV9GP",
+                    "clanAlias": "META",
+                    "clanLevel": 9,
+                    "discord": "https://discord.gg/NdHgTtddms"
+                }
+            ],
+            "playerList": [
+                {
+                    "name": "Rajjo",
+                    "ign": "Rzt's",
+                    "playerId": "#90892QPVU",
+                    "clanRole": "Leader",
+                    "image": "",
+                    "tags": [
+                        "Clan Wars",
+                        "Trophy Pushing",
+                        "Farming"
+                    ],
+                    "social": []
+                },
+                {
+                    "name": "Bluffer",
+                    "ign": "BluffeR",
+                    "playerId": "#8V2Y2P2LG",
+                    "clanRole": "CoLeader",
+                    "image": "",
+                    "tags": [
+                        "VETERAN",
+                        "CWL",
+                        "Farming"
+                    ],
+                    "social": []
+                },
+                {
+                    "name": "LucifeR",
+                    "ign": "Electrix",
+                    "playerId": "#92RC2R09V",
+                    "clanRole": "CoLeader",
+                    "image": "",
+                    "tags": [
+                        "Donation",
+                        "Strategy",
+                        "Farming"
+                    ],
+                    "social": []
+                },
+                {
+                    "name": "Cranky",
+                    "ign": "CrankgamingYT",
+                    "playerId": "#QY2LV89GY",
+                    "clanRole": "Elder",
+                    "image": "",
+                    "tags": [
+                        "Rusher"
+                    ],
+                    "social": []
+                }
+            ]
+        }
+    ]
+}

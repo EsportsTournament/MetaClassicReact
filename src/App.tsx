@@ -11,14 +11,14 @@ function App() {
     <Fragment>
       <GlobalStyle />
       <Router>
-        <div className="container">
-          <div className="header">
+        <div className="mt-app-container">
+          <div className="mt-app-header">
             <Header />
           </div>
-          <div className="content">
+          <div className="mt-app-content">
             <RouterComp />
           </div>
-          <div className="footer">
+          <div className="mt-app-footer">
             <Menubar />
           </div>
         </div>
