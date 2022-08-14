@@ -1,32 +1,41 @@
 @media (max-width: 450px) {
 
-.mt-app-container {
-    overflow-x: hidden;
-    background-color: var(--color-secondary);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    .mt-app-container {
+        // overflow-x: hidden;
+        // background-color: var(--color-secondary);
+        // width: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // position: relative;
 
-    .mt-app-header {
-        width: 100%;
-        color: var(--color-white);
-        background-color: var(--color-primary);
-        height: 54px;
-    }
+        .mt-app-header {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 60px;
+            right: 0px;
+            overflow: hidden;
+            color: var(--color-white);
+            background-color: var(--color-primary);
+        }
 
-    .mt-app-content {
-        z-index: 1;
-        top: 54px;
-        overflow-y: auto;
-    }
+        .mt-app-content {
+            position: absolute;
+            top: 60px;
+            bottom: 60px;
+            left: 0px;
+            right: 0px;
+            overflow: auto;
+        }
 
-    .mt-app-footer {
-        max-height: 6em;
-        max-width: 450px;
-        width: 100%;
-        height: 54px;
+        .mt-app-footer {
+            position: absolute;
+            bottom: 0px;
+            height: 60px;
+            left: 0px;
+            right: 0px;
+            overflow: hidden;
+        }
     }
-}
 
 }
