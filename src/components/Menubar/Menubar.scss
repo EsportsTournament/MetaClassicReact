@@ -16,8 +16,7 @@
 
   .nav-btn {
     @include glass;
-    margin: 0 10px 6px 10px;
-    padding: 4px 6px;
+    padding: 4px 0;
     text-align: center;
     border-color: transparent;
     text-transform: capitalize;
@@ -30,6 +29,7 @@
     margin-bottom: 10px;
     word-break: break-word;
     font-weight: bold;
+    font-size: 12px;
     text-decoration: none;
   }
 
@@ -40,12 +40,12 @@
     color: black;
 
     svg {
-      color: rgb(21, 9, 112);
+      color: black;
     }
   }
 
   svg {
     width: 100%;
-    font-size: 40px;
+    font-size: 24px;
   }
 }

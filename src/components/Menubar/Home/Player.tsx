@@ -1,5 +1,6 @@
 import React from "react";
 import { RiAccountCircleFill } from "react-icons/ri";
+import Social from "./Social";
 
 function Player(props: any) {
     return (
@@ -31,6 +32,14 @@ function Player(props: any) {
                         <div className="mt-player-cardValue ">{props.profile.clanRole}</div>
                     </div> : <></>}
                 </div>
+            </div>
+            <div className="mt-player-cardFooter">
+            {props.profile.social.length > 0 ?
+                    <div className="mt-player-cardChips">
+                         {props.profile.social.map( (socObj: any, index: number) => {
+                            return <Social key={index} social={socObj} />;
+                         })}
+                    </div> : <></>}
             </div>
             <div className="mt-player-cardFooter">
             {props.profile.tags.length > 0 ?

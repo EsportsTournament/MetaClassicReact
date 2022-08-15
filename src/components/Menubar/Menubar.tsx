@@ -3,7 +3,7 @@ import "./Menubar.scss";
 import { AiFillHome } from "react-icons/ai";
 import { IoLogoGameControllerB } from "react-icons/io";
 import { BsTrophyFill } from "react-icons/bs";
-import { MdOutlineSupport } from "react-icons/md";
+import { FaHandshake } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Menubar: FC = () => {
@@ -29,10 +29,10 @@ const Menubar: FC = () => {
             onClick={() => {
               setValue(1);
             }}
-            to="/upcoming"
+            to="/soon"
           >
             <IoLogoGameControllerB />
-            Upcoming
+            Games
           </Link>
           <Link
             id="myMatch"
@@ -40,10 +40,10 @@ const Menubar: FC = () => {
             onClick={() => {
               setValue(2);
             }}
-            to="/myMatch"
+            to="/soon"
           >
             <BsTrophyFill />
-            My Match
+            Wins
           </Link>
           <Link
             id="support"
@@ -51,10 +51,10 @@ const Menubar: FC = () => {
             onClick={() => {
               setValue(3);
             }}
-            to="/support"
+            to="/soon"
           >
-            <MdOutlineSupport />
-            Support
+            <FaHandshake />
+            Join Us
           </Link>
         </nav>
       </div>
