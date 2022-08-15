@@ -7,7 +7,7 @@ function Social(props: any) {
         window.open(url)!.focus();
     };
     return (
-        <div className="mt-social-cardChips">
+        <div>
             {props.social.platform === "youtube" ?
                 <div className="mt-social-chip youtubeFill" onClick={() => {
                     openInNewTab(props.social.link);
