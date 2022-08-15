@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 import { createGlobalStyle } from "styled-components";
 
+
 export const GlobalStyle = createGlobalStyle`
+
 body,html {
     margin: 0;
     padding: 0;
@@ -13,6 +15,15 @@ body,html {
     --border-radius: 10px;
     --padding: 6px 10px;
     --border: 2px solid var(--color-secondary);
+    --h1: 12px 12px;
+    --v1: 16px 0;
+    --h2: -8px -8px;
+    --v2: 12px 0;
+    --color-dark: rgba(0, 0, 0, 0.25);
+    --color-light: rgba(255, 255, 255, 0.3);
+    --bg-angle: -45deg;
+    --bg-start: rgba(0, 0, 0, 0.22);
+    --bg-end: rgba(255, 255, 255, 0.25);
 }
 *,
 *::before,

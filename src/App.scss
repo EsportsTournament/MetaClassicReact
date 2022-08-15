@@ -1,13 +1,6 @@
 @media (max-width: 450px) {
 
     .mt-app-container {
-        // overflow-x: hidden;
-        // background-color: var(--color-secondary);
-        // width: 100%;
-        // display: flex;
-        // flex-direction: column;
-        // position: relative;
-
         .mt-app-header {
             position: absolute;
             top: 0px;
@@ -37,5 +30,4 @@
             overflow: hidden;
         }
     }
-
 }

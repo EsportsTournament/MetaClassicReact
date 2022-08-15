@@ -1,3 +1,9 @@
+@mixin glass {
+  background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+  box-shadow: var(--h1) var(--v1) var(--color-dark),
+      var(--h2) var(--v2) var(--color-light);
+}
+
 .menubar {
   width: 100%;
   bottom: 0;
@@ -9,9 +15,10 @@
   }
 
   .nav-btn {
-    background: transparent;
+    @include glass;
     margin: 0 10px 6px 10px;
     padding: 4px 6px;
+    text-align: center;
     border-color: transparent;
     text-transform: capitalize;
     transition: all 0.3s linear;
@@ -28,6 +35,7 @@
 
   .active-nav,
   .nav-btn:hover {
+    @include glass;
     background: var(--color-secondary);
     color: black;
 
@@ -39,6 +47,5 @@
   svg {
     width: 100%;
     font-size: 40px;
-    margin-top: 2px;
   }
 }

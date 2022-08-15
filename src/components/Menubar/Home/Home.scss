@@ -1,17 +1,73 @@
+@mixin before-blur {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+@mixin glass {
+    background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+    box-shadow: var(--h1) var(--v1) var(--color-dark),
+        var(--h2) var(--v2) var(--color-light);
+}
+
+@mixin title {
+    color: var(--color-black);
+    padding: var(--padding);
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bgCoc {
+    overflow: auto;
+    position: relative;
+}
+
+.bgCoc::before {
+    @include before-blur;
+    background-image: url('https://www.pockettactics.com/wp-content/uploads/2020/10/clash-of-clans-update.jpg');
+}
+
+.bgBgmi {
+    /* this is needed or the background will be offset by a few pixels at the top */
+    overflow: auto;
+    position: relative;
+}
+
+.bgBgmi::before {
+    @include before-blur;
+    background-image: url('https://www.wallpapertip.com/wmimgs/169-1693675_pubg-mobile.jpg');
+}
+
 .homePage {
-    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/218.jpg');
+    z-index: 999;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    @mixin glass {
-        background: rgba(255, 255, 255, 0.3);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(2px);
-        -webkit-backdrop-filter: blur(2px);
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-    }
+    padding: var(--padding);
 
     .gameList {
         display: flex;
@@ -38,66 +94,47 @@
         }
     }
 
+    .clanCards {
+        padding: var(--padding);
+    }
+
 
     .mt-card {
         @include glass;
-        // margin: var(--padding);
         padding: var(--padding);
         transition: 0.3s;
         border-radius: var(--border-radius);
 
         .mt-cardTitle {
-            // margin: var(--padding);
-            color: var(--color-black);
-            width: 100%;
-            text-align: center;
-            font-weight: bold;
-            letter-spacing: 1px;
-            font-size: 20px;
+            @include title;
         }
 
         .mt-cardBody {
             padding: var(--padding);
             border-top: var(--border);
 
-
             .mt-cardValues {
                 display: flex;
                 justify-content: space-between;
                 padding: var(--padding);
                 font-size: 16px;
-                color: var(--color-secondary);
+                color: var(--color-black);
 
                 .mt-cardValue {
                     font-weight: bold;
                 }
 
                 .mt-button {
-                    background-color: var(--color-secondary);
                     border: none;
-                    padding: var(--padding);
+                    padding: 0 20px;
                     text-align: center;
                     text-decoration: none;
                     display: inline-block;
-                    border-radius: var(--border-radius);
                     font-size: 16px;
-                }
-            }
-
-            .mt-cardChips {
-                display: flex;
-                flex-wrap: wrap;
-
-                .mt-chip {
-                    margin: var(--padding);
-                    display: inline-block;
-                    color: var(--color-white);
-                    padding: 0 25px;
-                    height: 50px;
-                    font-size: 16px;
-                    line-height: 50px;
-                    border-radius: 25px;
-                    background-color: var(--color-complementary);
+                    @include glass;
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 30px;
                 }
             }
         }
@@ -115,8 +152,80 @@
     }
 
     .playerGrid {
-        display: grid;
-        gap: 0;
-        grid-template-columns: auto auto;
+        padding: var(--padding);
+    }
+}
+
+.mt-player-card {
+
+    @include glass;
+    color: white;
+    transition: 0.3s;
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    margin-top: 8px;
+
+    .mt-player-cardTitle {
+        @include title;
+    }
+
+    .mt-player-cardBody {
+        padding: var(--padding);
+        border-top: var(--border);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        .mt-player-left {
+            width: 24%;
+            border-right: var(--border);
+            @include center;
+
+            svg,
+            img {
+                width: 50px;
+                height: auto;
+            }
+        }
+
+        .mt-player-right {
+            width: 74%;
+
+            .mt-player-cardValues {
+                display: flex;
+                justify-content: space-between;
+
+                .mt-player-cardValue {
+                    font-weight: bold;
+                }
+
+            }
+        }
+    }
+
+    .mt-player-cardFooter {
+
+        padding-top: 8px;
+
+        .mt-player-cardChips {
+            display: flex;
+            justify-content: right;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            column-gap: 10px;
+
+            .mt-player-chip {
+                @include glass;
+                margin: 4px 0;
+                display: inline-block;
+                color: var(--color-white);
+                padding: 0 20px;
+                height: 40px;
+                font-size: 16px;
+                line-height: 40px;
+                border-radius: 30px;
+            }
+        }
     }
 }

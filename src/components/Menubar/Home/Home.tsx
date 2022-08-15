@@ -17,13 +17,16 @@ const Home = () => {
     });
     setGameList(getGameList);
   }, []);
-  
+
   return (
+    <div className={(game.name === "COC" ? "bgCoc" : "bgBgmi")}>
     <div className="homePage">
       <SubHeader games={gameList} onGameSelect={handleGameSelect} />
-      {game.clans.map((clan, index) => {
-        return <ClanCard clan={clan} key={index} />;
-      })}
+      <div className="clanCards">
+        {game.clans.map((clan, index) => {
+          return <ClanCard clan={clan} key={index} />;
+        })}
+      </div>
       <div className="titlePlayer">Players</div>
       <div className="playerGrid">
         {game.playerList.map((player, index) => {
@@ -31,6 +34,7 @@ const Home = () => {
         })}
       </div>
     </div>
+        </div>
   );
 };
 
