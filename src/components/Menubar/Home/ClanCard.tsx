@@ -1,4 +1,5 @@
 import React from "react";
+import Social from "./Social";
 
 function ClanCard(props: any) {
     return (
@@ -20,13 +21,11 @@ function ClanCard(props: any) {
                     <span className="mt-cardkey">Clan Level: </span>
                     <div className="mt-cardValue ">{props.clan.clanLevel}</div>
                 </div>: <></>}
-                {props.clan.clanLevel !=="" ? 
+                {props.clan.discord.link !=="" ? 
                 <div className="mt-cardValues">
-                    <span className="mt-cardkey">Discord: </span>
-                    <div className="mt-cardValue mt-button">
-                        <a href={props.clan.discord} > Join </a>
-                    </div>
-                </div>: <></>}
+                    <Social social={props.clan.discord} />
+                </div>
+                : <>bla</>}
 
             </div>
         </div>

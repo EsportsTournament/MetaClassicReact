@@ -30,8 +30,8 @@ const Header: FC = () => {
   }
 
   useEffect(() => {
-    // getLoginURL();
-    // getMe();
+    getLoginURL();
+    getMe();
   }, []);
 
   return (

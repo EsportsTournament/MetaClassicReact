@@ -9,7 +9,11 @@
                     "clanId": "",
                     "clanAlias": "META",
                     "clanLevel": 5,
-                    "discord": "https://discord.gg/NdHgTtddms"
+                    "discord" :   {
+                        "platform": "discord",
+                        "link": "https://discord.gg/NdHgTtddms",
+                        "name": "The Gaurdions"
+                    }
                 }
             ],
             "playerList": [
@@ -94,7 +98,11 @@
                     "clanId": "#Y9PGV9GP",
                     "clanAlias": "META",
                     "clanLevel": 9,
-                    "discord": "https://discord.gg/NdHgTtddms"
+                    "discord" :   {
+                        "platform": "discord",
+                        "link": "https://discord.gg/NdHgTtddms",
+                        "name": "The Gaurdions"
+                    }
                 }
             ],
             "playerList": [

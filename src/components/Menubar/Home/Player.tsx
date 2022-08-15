@@ -35,7 +35,7 @@ function Player(props: any) {
             </div>
             <div className="mt-player-cardFooter">
             {props.profile.social.length > 0 ?
-                    <div className="mt-player-cardChips">
+                    <div>
                          {props.profile.social.map( (socObj: any, index: number) => {
                             return <Social key={index} social={socObj} />;
                          })}
@@ -43,9 +43,9 @@ function Player(props: any) {
             </div>
             <div className="mt-player-cardFooter">
             {props.profile.tags.length > 0 ?
-                    <div className="mt-player-cardChips">
+                    <div className="mt-social-cardChips">
                          {props.profile.tags.map( (tag: string, index: number) => {
-                            return <div className="mt-player-chip" key={index}>{tag}</div>;
+                            return <div className="mt-social-chip" key={index}>{tag}</div>;
                          })}
                     </div> : <></>}
             </div>
