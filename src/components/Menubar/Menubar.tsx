@@ -24,18 +24,18 @@ const Menubar: FC = () => {
             Home
           </Link>
           <Link
-            id="profile"
+            id="myMatch"
             className={"nav-btn " + (value === 1 ? "active-nav" : "")}
             onClick={() => {
               setValue(1);
             }}
-            to="/soon"
+            to="/myMatch"
           >
             <IoLogoGameControllerB />
             Games
           </Link>
           <Link
-            id="myMatch"
+            id="profile"
             className={"nav-btn " + (value === 2 ? "active-nav" : "")}
             onClick={() => {
               setValue(2);

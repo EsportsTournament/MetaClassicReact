@@ -1,3 +1,9 @@
+@mixin glass {
+    background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+    box-shadow: var(--h1) var(--v1) var(--color-dark),
+        var(--h2) var(--v2) var(--color-light);
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -5,7 +11,14 @@
     width: 100%;
 
     .logo {
+        @include glass;
         height: 50px;
+        width: 50px;
+        margin: 4px;
+        padding: 2px;
+        padding-top: 12px;
+        border-radius: 50%;
+        top: -4px;
     }
 
     .title {
@@ -14,6 +27,7 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         color: var(--color-black);
+        text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
     }
 
     .login {
@@ -31,4 +45,28 @@
             color: black;
         }
     }
+}
+
+.glass-button {
+    @include glass;
+    display: inline-block;
+    color: var(--color-white);
+    padding: 0 20px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    border-radius: 30px;
+
+    svg {
+        float: left;
+        margin: 0 10px 0 -10px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
 }
