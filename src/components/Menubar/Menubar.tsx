@@ -1,61 +1,57 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import "./Menubar.scss";
 import { AiFillHome } from "react-icons/ai";
 import { IoLogoGameControllerB } from "react-icons/io";
 import { BsTrophyFill } from "react-icons/bs";
 import { FaHandshake } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Menubar: FC = () => {
+  const pages = [
+    {
+      "path": "",
+      "value": 0,
+      "icon": <AiFillHome />,
+      "name": "Home"
+    },
+    {
+      "path": "myMatch",
+      "value": 1,
+      "icon": <IoLogoGameControllerB />,
+      "name": "Games"
+    },
+    {
+      "path": "soon",
+      "value": 2,
+      "icon": <BsTrophyFill />,
+      "name": "Wins"
+    },
+    {
+      "path": "soon",
+      "value": 3,
+      "icon": <FaHandshake />,
+      "name": "Join Us"
+    },
+  ];
+  const location = useLocation();
   const [value, setValue] = useState(0);
+  useEffect(() => {
+    setValue(pages.filter( page => ("/" + page.path) == location.pathname)[0].value);
+  }, []);
+  
   return (
     <>
       <div className="menubar">
         <nav className="nav-container">
-          <Link
-            id="home"
-            className={"nav-btn " + (value === 0 ? "active-nav" : "")}
-            onClick={() => {
-              setValue(0);
-            }}
-            to="/home"
-          >
-            <AiFillHome />
-            Home
-          </Link>
-          <Link
-            id="myMatch"
-            className={"nav-btn " + (value === 1 ? "active-nav" : "")}
-            onClick={() => {
-              setValue(1);
-            }}
-            to="/myMatch"
-          >
-            <IoLogoGameControllerB />
-            Games
-          </Link>
-          <Link
-            id="profile"
-            className={"nav-btn " + (value === 2 ? "active-nav" : "")}
-            onClick={() => {
-              setValue(2);
-            }}
-            to="/soon"
-          >
-            <BsTrophyFill />
-            Wins
-          </Link>
-          <Link
-            id="support"
-            className={"nav-btn " + (value === 3 ? "active-nav" : "")}
-            onClick={() => {
-              setValue(3);
-            }}
-            to="/soon"
-          >
-            <FaHandshake />
-            Join Us
-          </Link>
+          {pages.map(page => {
+            return <Link key={page.value} id={page.path}
+            className={"nav-btn " + (value === page.value ? "active-nav" : "")}
+            to={"/" + page.path} onClick={() => {
+              setValue(page.value);
+            }} >
+              {page.icon} {page.name}
+            </Link>;
+          })}
         </nav>
       </div>
     </>

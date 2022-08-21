@@ -41,6 +41,13 @@
     align-items: center;
 }
 
+@mixin space-evenly {
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 .bgCoc {
     overflow: auto;
     position: relative;
@@ -163,18 +170,19 @@
     }
 
     .playerGrid {
-        padding: var(--padding);
+       @include space-evenly;
     }
 }
 
 .mt-player-card {
 
     @include glass;
+    width: 420px;
     color: white;
     transition: 0.3s;
     border-radius: var(--border-radius);
     padding: var(--padding);
-    margin-top: 8px;
+    margin-top: 20px;
 
     .mt-player-cardTitle {
         @include title;
@@ -270,4 +278,9 @@
                   }
         }
     }
+}
+
+.displayGrid {
+    background-color: var(--color-secondary);
+    @include space-evenly;
 }

@@ -1,8 +1,10 @@
 .video-responsive {
-    height: 100%;
-  }
-  
-  .video-responsive iframe {
-    height: 100%;
-    width: 100%;
-  }
+  padding: var(--padding);
+  min-width: 420px;
+  min-height: 600px;
+}
+
+.video-responsive iframe {
+  height: 100%;
+  width: 100%;
+}

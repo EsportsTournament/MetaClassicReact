@@ -45,12 +45,9 @@ const Header: FC = () => {
         <img className="logo" src={bgImg} alt="Logo" />
       </div>
       <div className="title mt-pointer" onClick={navigateToHome}>{appName}</div>
-      <div className="login">
-        {me.picture ?
-          (<img className="profileImage" src={me.picture} alt="profile image" />) :
-          (<></>)}
+      <div className="glass-button login">
         {me.name ? (<div className="userName">{me.name}</div>) : <a href={loginURL}>
-        <span className="glass-button">Login</span>
+          Login
         </a>}
       </div>
     </div>
