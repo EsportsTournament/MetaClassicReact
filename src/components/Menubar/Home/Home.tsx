@@ -15,7 +15,7 @@ const Home = () => {
   const [playerList, setPlayerList] = useState([]);
 
   async function getMyPlayers() {
-    await axios.post("http://localhost:8890/common/fetchAllPlayersDetails", {
+    await axios.post("https://mysterious-beyond-28283.herokuapp.com/common/fetchAllPlayersDetails", {
       "clan": "ckzo"
     }, {
       withCredentials: true,
