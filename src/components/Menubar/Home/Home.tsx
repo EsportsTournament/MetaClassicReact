@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import SubHeader from "./SubHeader";
 import info from "./../../../assets/info.json";
 import ClanCard from "./ClanCard";
@@ -11,11 +12,25 @@ const Home = () => {
   const handleGameSelect = (gameId: number) => {
     setGame(info.games[gameId]);
   };
+  const [playerList, setPlayerList] = useState([]);
+
+  async function getMyPlayers() {
+    await axios.post("http://localhost:8890/common/fetchAllPlayersDetails", {
+      "clan": "ckzo"
+    }, {
+      withCredentials: true,
+    })
+      .then((res: any) => {
+        console.log(res.data);        
+        setPlayerList(res.data);
+      });
+  }
   useEffect(() => {
     const getGameList = info.games.map(game => {
       return { "name": game.name, "fullName": game.fullName };
     });
     setGameList(getGameList);
+    getMyPlayers();
   }, []);
 
   return (

@@ -284,3 +284,17 @@
     background-color: var(--color-secondary);
     @include space-evenly;
 }
+
+
+.video-responsive {
+    @include glass;
+    margin: 10px;
+    padding: 10px;
+    min-width: 420px;
+    min-height: 600px;
+  }
+  
+  .video-responsive iframe {
+    height: 100%;
+    width: 100%;
+  }
