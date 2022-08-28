@@ -115,11 +115,21 @@
         color: var(--color-white);
 
         .mt-cardTitle {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
             @include title;
+            .mt-badgeImage {
+                height: 30px;
+                width: auto;
+            }
         }
 
         .mt-cardBody {
             padding: var(--padding);
+
+   
 
             .mt-cardValues {
                 display: flex;
@@ -223,6 +233,12 @@
 
                 .mt-player-cardValue {
                     font-weight: bold;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        height: 30px;
+                    }
                 }
 
             }
@@ -251,7 +267,7 @@
                 line-height: 40px;
                 border-radius: 30px;
 
-                svg {
+                svg, img {
                     float: left;
                     margin: 0 10px 0 -10px;
                     height: 40px;

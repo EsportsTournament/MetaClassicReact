@@ -1,6 +1,75 @@
 {
     "games": [
         {
+            "name": "COC",
+            "fullName": "Clash Of Clans",
+            "clans": [
+                {
+                    "clanName": "The Gaurdions",
+                    "clanId": "#Y9PGV9GP",
+                    "clanAlias": "META",
+                    "clanLevel": 9,
+                    "discord" :   {
+                        "platform": "discord",
+                        "link": "https://discord.gg/NdHgTtddms",
+                        "name": "The Gaurdions"
+                    }
+                }
+            ],
+            "playerList": [
+                {
+                    "name": "Rajjo",
+                    "ign": "Rzt's",
+                    "playerId": "#90892QPVU",
+                    "clanRole": "Leader",
+                    "image": "https://lh3.googleusercontent.com/a-/AFdZucpMoKnNodp9TT7rHM9iMDXpSEWwNHebo65CeA=s32",
+                    "tags": [
+                        "Clan Wars",
+                        "Trophy Pushing",
+                        "Farming"
+                    ],
+                    "social": []
+                },
+                {
+                    "name": "Bluffer",
+                    "ign": "BluffeR",
+                    "playerId": "#8V2Y2P2LG",
+                    "clanRole": "CoLeader",
+                    "image": "https://lh3.googleusercontent.com/a-/AFdZucooU8rbbYvGE0tNbkcgimjFsg_YbOc-2ckVbA=s32",
+                    "tags": [
+                        "VETERAN",
+                        "CWL",
+                        "Farming"
+                    ],
+                    "social": []
+                },
+                {
+                    "name": "LucifeR",
+                    "ign": "Electrix",
+                    "playerId": "#92RC2R09V",
+                    "clanRole": "CoLeader",
+                    "image": "https://lh3.googleusercontent.com/ogw/AOh-ky13_zuipRTDQrX6nvF7BW1wYN1nTj2YNkZQ5yhRpAY=s64-c-mo",
+                    "tags": [
+                        "Donation",
+                        "Strategy",
+                        "Farming"
+                    ],
+                    "social": []
+                },
+                {
+                    "name": "Cranky",
+                    "ign": "CrankgamingYT",
+                    "playerId": "#QY2LV89GY",
+                    "clanRole": "Elder",
+                    "image": "https://lh3.googleusercontent.com/a-/AFdZucqFrs2ouQ_riSGRIC_tZX8KQKOSCAKZa71NLg=s32",
+                    "tags": [
+                        "Rusher"
+                    ],
+                    "social": []
+                }
+            ]
+        },
+        {
             "name": "BGMI",
             "fullName": "Battle Grounds Mobile India",
             "clans": [
@@ -89,75 +158,6 @@
                         "Mid Range",
                         "Sniper",
                         "Support"
-                    ],
-                    "social": []
-                }
-            ]
-        },
-        {
-            "name": "COC",
-            "fullName": "Clash Of Clans",
-            "clans": [
-                {
-                    "clanName": "The Gaurdions",
-                    "clanId": "#Y9PGV9GP",
-                    "clanAlias": "META",
-                    "clanLevel": 9,
-                    "discord" :   {
-                        "platform": "discord",
-                        "link": "https://discord.gg/NdHgTtddms",
-                        "name": "The Gaurdions"
-                    }
-                }
-            ],
-            "playerList": [
-                {
-                    "name": "Rajjo",
-                    "ign": "Rzt's",
-                    "playerId": "#90892QPVU",
-                    "clanRole": "Leader",
-                    "image": "https://lh3.googleusercontent.com/a-/AFdZucpMoKnNodp9TT7rHM9iMDXpSEWwNHebo65CeA=s32",
-                    "tags": [
-                        "Clan Wars",
-                        "Trophy Pushing",
-                        "Farming"
-                    ],
-                    "social": []
-                },
-                {
-                    "name": "Bluffer",
-                    "ign": "BluffeR",
-                    "playerId": "#8V2Y2P2LG",
-                    "clanRole": "CoLeader",
-                    "image": "https://lh3.googleusercontent.com/a-/AFdZucooU8rbbYvGE0tNbkcgimjFsg_YbOc-2ckVbA=s32",
-                    "tags": [
-                        "VETERAN",
-                        "CWL",
-                        "Farming"
-                    ],
-                    "social": []
-                },
-                {
-                    "name": "LucifeR",
-                    "ign": "Electrix",
-                    "playerId": "#92RC2R09V",
-                    "clanRole": "CoLeader",
-                    "image": "https://lh3.googleusercontent.com/ogw/AOh-ky13_zuipRTDQrX6nvF7BW1wYN1nTj2YNkZQ5yhRpAY=s64-c-mo",
-                    "tags": [
-                        "Donation",
-                        "Strategy",
-                        "Farming"
-                    ],
-                    "social": []
-                },
-                {
-                    "name": "Cranky",
-                    "ign": "CrankgamingYT",
-                    "playerId": "#QY2LV89GY",
-                    "clanRole": "Elder",
-                    "image": "https://lh3.googleusercontent.com/a-/AFdZucqFrs2ouQ_riSGRIC_tZX8KQKOSCAKZa71NLg=s32",
-                    "tags": [
-                        "Rusher"
                     ],
                     "social": []
                 }
