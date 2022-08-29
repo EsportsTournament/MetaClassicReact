@@ -7,6 +7,7 @@ import "./Home.scss";
 import Player from "./BGMI/Player";
 import COCClan from "./COC/COCClan";
 import COCPlayer from "./COC/COCPlayer";
+import Loading from "../../Shared/Loading";
 
 const Home = () => {
   const [game, setGame] = useState(info.games[0]);
@@ -14,6 +15,8 @@ const Home = () => {
   const handleGameSelect = (gameId: number) => {
     setGame(info.games[gameId]);
   };
+  const [clan, setClan] = useState({} as any);
+  const [clanLink, setClanLink] = useState("");
   const [cocPlayerList, setCOCPlayerList] = useState([] as any[]);
   useEffect(() => {
     async function getMyPlayers() {
@@ -25,6 +28,8 @@ const Home = () => {
         .then((res: any) => {
           console.log(res.data);
           setCOCPlayerList(res.data.clanPlayers);
+          setClan(res.data.clan);
+          setClanLink(res.data.clanLink);
         });
     }
     const getGameList = info.games.map(game => {
@@ -43,7 +48,7 @@ const Home = () => {
             {
               game.name === "COC" ? <>
                 <div className="clanCards">
-                  <COCClan clan={cocPlayerList[0].clan} />
+                  <COCClan clan={clan} clanLink={clanLink} />
                 </div>
                 <div className="titlePlayer">Players</div>
                 <div className="playerGrid">
@@ -66,7 +71,7 @@ const Home = () => {
               </>
             }
           </> : <>
-            <span>Loading...</span>
+            <Loading />
           </>
         }
       </div>

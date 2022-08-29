@@ -13,6 +13,7 @@ function COCPlayer(props: any) {
                     </div>
                     <div className="mt-player-cardTitle">{props.profile.name}</div>
                 </div>
+                <div className="mt-player-seperator"></div>
                 <div className="mt-player-right">
                     {props.profile.tag !== "" ?
                         <div className="mt-player-cardValues">

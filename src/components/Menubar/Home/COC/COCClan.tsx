@@ -1,12 +1,23 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Social from "../BGMI/Social";
 
 function COCClan(props: any) {
+
+  const navigate = useNavigate();
 
   const discord = {
     "platform": "discord",
     "link": "https://discord.gg/NdHgTtddms",
     "name": "The Gaurdions"
+  };
+
+  const navigateToWar = () => {
+    navigate("/war");
+  };
+
+  const joinClan = () => {
+    window.open(props.clanLink);
   };
 
   return (
@@ -28,8 +39,14 @@ function COCClan(props: any) {
             <div className="mt-cardValue ">{props.clan.level}</div>
           </div> : <></>}
         {discord.link !== "" ?
-          <div className="mt-cardValues">
+          <div className="mt-social-cardChips">
             <Social social={discord} />
+            <button className="mt-button" onClick={() => {
+              joinClan();
+            }}>Join Clan</button>
+            <button className="mt-button" onClick={() => {
+              navigateToWar();
+            }}>Current War</button>
           </div>
           : <></>}
 

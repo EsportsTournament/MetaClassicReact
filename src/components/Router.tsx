@@ -4,7 +4,8 @@ import Home from "./Menubar/Home/Home";
 import Upcoming from "./Menubar/Upcoming/Upcoming";
 import Support from "./Menubar/Support/Support";
 import MyMatch from "./Menubar/My-Match/My-Match";
-import ComingSoon from "./Shared/Stepper/ComingSoon/ComingSoon";
+import ComingSoon from "./Shared/ComingSoon/ComingSoon";
+import COCWar from "./Menubar/Home/COC/COCWar";
 
 const RouterComp = () => {
   return (
@@ -15,6 +16,7 @@ const RouterComp = () => {
       <Route path="/upcoming" element={<Upcoming />} />
       <Route path="/myMatch" element={<MyMatch />} />
       <Route path="/support" element={<Support />} />
+      <Route path="/war" element={<COCWar />} />
     </Routes>
   );
 };
