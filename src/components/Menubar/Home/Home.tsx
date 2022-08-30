@@ -52,7 +52,7 @@ const Home = () => {
                 </div>
                 <div className="titlePlayer">Players</div>
                 <div className="playerGrid">
-                  {cocPlayerList.map((player, index) => {
+                  {cocPlayerList.sort( (a,b) => b.received - a.received).map((player, index) => {
                     return <COCPlayer profile={player} key={index} />;
                   })}
                 </div>
