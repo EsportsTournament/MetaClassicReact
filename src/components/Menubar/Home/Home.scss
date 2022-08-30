@@ -1,4 +1,4 @@
-@mixin before-blur {
+@mixin before-blur($blur: 10px) {
     content: "";
     position: fixed;
     left: 0;
@@ -12,11 +12,11 @@
 
     background-position: center;
 
-    -webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    -o-filter: blur(10px);
-    -ms-filter: blur(10px);
-    filter: blur(10px);
+    -webkit-filter: blur($blur);
+    -moz-filter: blur($blur);
+    -o-filter: blur($blur);
+    -ms-filter: blur($blur);
+    filter: blur($blur);
 }
 
 @mixin glass {
@@ -62,7 +62,7 @@
     flex-wrap: wrap;
 }
 
-.bgCoc {
+.bgCoc, .bgWar {
     overflow: auto;
     position: relative;
 }
@@ -70,6 +70,11 @@
 .bgCoc::before {
     @include before-blur;
     background-image: url('https://www.pockettactics.com/wp-content/uploads/2020/10/clash-of-clans-update.jpg');
+}
+
+.bgWar::before {
+    @include before-blur(0px);
+    background-image: url('https://cdn.discordapp.com/attachments/830882773367259196/845716122276069376/unknown.png');
 }
 
 .bgBgmi {
@@ -366,5 +371,32 @@
 
     .title {
         @include center;
+        @include title;
+        background: linear-gradient(135deg, rgb(241, 241, 108), rgb(108, 223, 108));
+        width: 100%;
+        justify-content: space-around;
+
+        .titleBadge {
+            @include center;
+        }
+
+        img {
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    .timeLeft {
+        @include center; 
+        background: linear-gradient(135deg, rgb(223, 158, 108), rgb(241, 241, 108));
+       
+        justify-content: space-around;
+        // color: white;
+        padding: 10px;
+    }
+
+    .leaderBoard {
+        @include center;
+        flex-direction: column;
     }
 }

@@ -28,7 +28,7 @@ function COCClan(props: any) {
         <img className="mt-badgeImage" src="https://api-assets.clashofclans.com/badges/512/SfewAMajmC1nKwju4MMzp91hmJw8K677Vg7nOCfZubU.png" alt="Clan Badge Image" />
       </div>
       <div className="mt-cardBody">
-        {props.clan.tag !== "" ?
+        {props.clan.tag !== "" ?  
           <div className="mt-cardValues">
             <span className="mt-cardkey">Clan Id: </span>
             <div className="mt-cardValue ">{props.clan.tag}</div>
