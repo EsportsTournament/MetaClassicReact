@@ -1,61 +1,27 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Loading from "../../../Shared/Loading";
+import WarPlayer from "./WarPlayer";
 
 function COCWar() {
     const [war, setWar] = useState({} as any);
+    const [warMembers, setWarMembers] = useState([] as any[]);
     // var options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
     useEffect(() => {
         async function getMyWar() {
-            return await axios.post("https://mysterious-beyond-28283.herokuapp.com/common/fetchCurrentWarDetails", {
+            return await axios.post("http://localhost:8890/common/fetchCurrentWarDetails", {
                 "clan": "ckzo"
             }, {
                 withCredentials: true,
             })
                 .then((res: any) => {
                     console.log(res.data);
-                    setWar(res.data.clanWar);
+                    setWar(res.data.currentWar);
+                    setWarMembers(res.data.members);
                 });
         }
         getMyWar();
     }, []);
-
-    function leaderBoard(members: any[], opponent: any[]) {
-        const leaderBoard: any[] = [];
-        members.forEach(member => {
-            const attacker = {
-                name: member.name,
-                score: 0,
-                pos: member.mapPosition,
-                th: member.townHallLevel,
-                attacks: [] as any[],
-                defence: [] as any[]
-            };
-            member.attacks.forEach((attack: any) => {
-                attacker.attacks.push({
-                    stars: attack.stars,
-                    name: getNameOfDefender(attack.defenderTag, opponent)
-                });
-                attacker.score += attack.destruction;
-            });
-            leaderBoard.push(attacker);
-        });
-        return leaderBoard;
-    }
-
-    function getNameOfDefender(tag: string, members: any[]) {
-        return tag;
-    }
-
-    function warEvents(members: any[]) {
-        const warEvents: any[] = [];
-        members.forEach(member => {
-            member.attacks.forEach((attack: any) => {
-                warEvents.push(attack);
-            });
-        });
-        return warEvents;
-    }
 
     if (war.state) {
         return (
@@ -83,14 +49,12 @@ function COCWar() {
                     <div className="leaderBoard">
 
                     {
-                        leaderBoard(war.clan.members, war.opponent.members).sort( function(a,b) {
+                        warMembers
+                        .sort( function(a,b) {
                             return b.score - a.score;
-                        }).map(leader => {
-                            return <>
-                                <div>
-                                 {leader.name} ने {leader.score}% स्कोर प्राप्त किया॰
-                                </div>
-                            </>;
+                        })
+                        .map((member: any, index: number) => {
+                            return <WarPlayer player={member} key={index} />;
                         })
                     }
                     </div>

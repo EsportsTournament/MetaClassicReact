@@ -21,10 +21,10 @@ const Menubar: FC = () => {
       "name": "Games"
     },
     {
-      "path": "soon",
+      "path": "war",
       "value": 2,
       "icon": <BsTrophyFill />,
-      "name": "Wins"
+      "name": "Wars"
     },
     {
       "path": "soon",

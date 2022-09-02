@@ -398,5 +398,9 @@
     .leaderBoard {
         @include center;
         flex-direction: column;
+
+        .warPlayer {
+            @include center;
+        }
     }
 }

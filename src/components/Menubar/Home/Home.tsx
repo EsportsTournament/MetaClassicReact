@@ -20,7 +20,7 @@ const Home = () => {
   const [cocPlayerList, setCOCPlayerList] = useState([] as any[]);
   useEffect(() => {
     async function getMyPlayers() {
-      return await axios.post("https://mysterious-beyond-28283.herokuapp.com/common/fetchAllPlayersDetails", {
+      return await axios.post("http://localhost:8890/common/fetchAllPlayersDetails", {
         "clan": "ckzo"
       }, {
         withCredentials: true,
@@ -52,7 +52,7 @@ const Home = () => {
                 </div>
                 <div className="titlePlayer">Players</div>
                 <div className="playerGrid">
-                  {cocPlayerList.sort( (a,b) => b.received - a.received).map((player, index) => {
+                  {cocPlayerList.map((player, index) => {
                     return <COCPlayer profile={player} key={index} />;
                   })}
                 </div>
