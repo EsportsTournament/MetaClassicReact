@@ -20,7 +20,7 @@ const Home = () => {
   const [cocPlayerList, setCOCPlayerList] = useState([] as any[]);
   useEffect(() => {
     async function getMyPlayers() {
-      return await axios.post("http://localhost:8890/common/fetchAllPlayersDetails", {
+      return await axios.post("https://mysterious-beyond-28283.herokuapp.com/common/fetchAllPlayersDetails", {
         "clan": "ckzo"
       }, {
         withCredentials: true,

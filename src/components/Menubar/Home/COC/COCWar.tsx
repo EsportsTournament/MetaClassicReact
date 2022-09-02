@@ -9,7 +9,7 @@ function COCWar() {
     // var options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
     useEffect(() => {
         async function getMyWar() {
-            return await axios.post("http://localhost:8890/common/fetchCurrentWarDetails", {
+            return await axios.post("https://mysterious-beyond-28283.herokuapp.com/common/fetchCurrentWarDetails", {
                 "clan": "ckzo"
             }, {
                 withCredentials: true,
