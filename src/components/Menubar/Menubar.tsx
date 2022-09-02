@@ -37,7 +37,7 @@ const Menubar: FC = () => {
   const [value, setValue] = useState(0);
   useEffect(() => {
     setValue(pages.filter( page => ("/" + page.path) == location.pathname)[0].value);
-  }, []);
+  }, [location]);
   
   return (
     <>
