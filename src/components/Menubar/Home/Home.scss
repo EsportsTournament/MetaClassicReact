@@ -62,7 +62,8 @@
     flex-wrap: wrap;
 }
 
-.bgCoc, .bgWar {
+.bgCoc,
+.bgWar {
     overflow: auto;
     position: relative;
 }
@@ -387,20 +388,55 @@
     }
 
     .timeLeft {
-        @include center; 
+        @include center;
         background: linear-gradient(135deg, rgb(223, 158, 108), rgb(241, 241, 108));
-       
+
         justify-content: space-around;
         // color: white;
         padding: 10px;
     }
 
     .leaderBoard {
+        padding: 10px 0;
         @include center;
         flex-direction: column;
+        gap: 20px;
 
         .warPlayer {
             @include center;
+            width: 100%;
+            justify-content: space-evenly;
+
+            .member,
+            .attacks {
+                @include center;
+                flex-direction: column;
+
+                .attack {
+                    @include center;
+                    flex-direction: column;
+                    img {
+                        height: 40px;
+                        width: 40px; 
+                    }
+                }
+            }
+
+            .score-label {
+                @include glass;
+                @include center;
+                flex-direction: column;
+                border-radius: 30px;
+            }
+
+            .score-label {
+                padding: 20px;
+            }
+
+            .score {
+                margin: 4px 8px;
+            }
+
         }
     }
 }
