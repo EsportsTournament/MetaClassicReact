@@ -5,7 +5,7 @@ function WarPlayer(props: any) {
         <div className="warPlayer">
             <div className="member">
                 <img src={require(`./../../../../assets/images/th/${props.player.th}.webp`)} alt="town hall iamge" />
-                {props.player.name} ({props.player.pos})
+                {props.player.pos}. {props.player.name}
             </div>
             <div className="attacks">
                 {props.player.attacks.map( (attack: any, index: number) => {
@@ -14,7 +14,7 @@ function WarPlayer(props: any) {
                          <img src={require("./../../../../assets/images/th/_3.webp")} alt="town hall iamge" />
                        :  <img src={require(`./../../../../assets/images/th/${attack.defenderTh}_${attack.stars}.webp`)} alt="town hall iamge" />
                     }
-                        {attack.defenderName} ({attack.defenderMapPosition})
+                        {attack.defenderMapPosition}. {attack.defenderName}
                     </div>;
                 })}
             </div>

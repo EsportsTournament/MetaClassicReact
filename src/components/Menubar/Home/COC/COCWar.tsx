@@ -43,14 +43,14 @@ function COCWar() {
                             Ends on:
                         </span>
                         <span>
-                            {(new Date(war.endTime)).toLocaleString("hi-IN", {dateStyle: "long", timeStyle:"long"})}
+                            {(new Date(war.endTime)).toLocaleString("en-US", {dateStyle: "medium", timeStyle:"medium"})}
                         </span>
                     </div>
                     <div className="leaderBoard">
                     <div className="warPlayer">
-                        <div className="title">Member(Map Pos)</div>
-                        <div className="title">Attacks(Map Pos)</div>
-                        <div className="title">Total Score</div>
+                        <div className="title">Member</div>
+                        <div className="title">Attacks</div>
+                        <div className="title">Score</div>
                     </div>
                     {
                         warMembers
