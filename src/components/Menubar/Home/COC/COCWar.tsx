@@ -47,7 +47,11 @@ function COCWar() {
                         </span>
                     </div>
                     <div className="leaderBoard">
-
+                    <div className="warPlayer">
+                        <div className="title">Member(Map Pos)</div>
+                        <div className="title">Attacks(Map Pos)</div>
+                        <div className="title">Total Score</div>
+                    </div>
                     {
                         warMembers
                         .sort( function(a,b) {

@@ -404,11 +404,13 @@
 
         .warPlayer {
             @include center;
+            padding: 0 8px;
             width: 100%;
             justify-content: space-evenly;
 
             .member,
             .attacks {
+                width: 40%;
                 @include center;
                 flex-direction: column;
 
@@ -423,6 +425,7 @@
             }
 
             .score-label {
+                width: 20%;
                 @include glass;
                 @include center;
                 flex-direction: column;
@@ -431,6 +434,7 @@
 
             .score-label {
                 padding: 20px;
+                background-color: var(--color-primary);
             }
 
             .score {

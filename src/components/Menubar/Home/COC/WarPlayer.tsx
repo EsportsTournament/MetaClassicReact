@@ -19,7 +19,6 @@ function WarPlayer(props: any) {
                 })}
             </div>
             <div className="score-label">
-                <span>Total Score</span> 
                 <span className="score">
                     {props.player.score}
                 </span>
