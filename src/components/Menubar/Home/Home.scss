@@ -473,3 +473,55 @@
         }
     }
 }
+
+.joinUs {
+    @include center;
+    @include glass;
+    color: white;
+    height: calc(100vh - 120px);
+    
+    .formCard {
+        margin-bottom: 100px;
+        @include glass;
+        @include center;
+        flex-direction: column;
+        padding: var(--padding);
+        width: 90%;
+        .cardTitle {
+            padding: var(--padding);
+            @include title;
+        }
+
+        .cardBody {
+            padding: var(--padding);
+            width: 100%;
+
+            .formGroup {
+                padding: var(--padding);
+
+                .label {
+                    font-size: 18px;
+                }
+                .input {
+                    input[type=text], input[type=date] {
+                        width: 100%;
+                        padding: 12px;
+                        margin: 8px 0;
+                        box-sizing: border-box;
+                      }
+
+                      input[type=radio] {
+                        width: 15%;
+                        padding: 12px;
+                        margin: 8px 0;
+                        box-sizing: border-box;
+                      }
+                }
+
+                .button {
+                    @include center;
+                }
+            }
+        }
+    }
+}

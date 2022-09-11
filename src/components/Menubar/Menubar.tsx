@@ -2,9 +2,9 @@ import React, { FC, useEffect, useState } from "react";
 import "./Menubar.scss";
 import { AiFillHome } from "react-icons/ai";
 import { IoLogoGameControllerB } from "react-icons/io";
-import { BsTrophyFill } from "react-icons/bs";
 import { FaHandshake } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { RiSwordFill } from "react-icons/ri";
 
 const Menubar: FC = () => {
   const pages = [
@@ -23,11 +23,11 @@ const Menubar: FC = () => {
     {
       "path": "war",
       "value": 2,
-      "icon": <BsTrophyFill />,
+      "icon": <RiSwordFill />,
       "name": "Wars"
     },
     {
-      "path": "soon",
+      "path": "join-us",
       "value": 3,
       "icon": <FaHandshake />,
       "name": "Join Us"

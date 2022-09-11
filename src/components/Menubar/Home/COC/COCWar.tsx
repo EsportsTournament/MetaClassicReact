@@ -7,9 +7,11 @@ function COCWar() {
     const [war, setWar] = useState({} as any);
     const [warMembers, setWarMembers] = useState([] as any[]);
     // var options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+    const backendUrl = "https://mysterious-beyond-28283.herokuapp.com";
+    // const backendUrl = "http://localhost:8890";
     useEffect(() => {
         async function getMyWar() {
-            return await axios.post("https://mysterious-beyond-28283.herokuapp.com/common/fetchCurrentWarDetails", {
+            return await axios.post(`${backendUrl}/common/fetchCurrentWarDetails`, {
                 "clan": "ckzo"
             }, {
                 withCredentials: true,
@@ -43,24 +45,24 @@ function COCWar() {
                             Ends on:
                         </span>
                         <span>
-                            {(new Date(war.endTime)).toLocaleString("en-US", {dateStyle: "medium", timeStyle:"medium"})}
+                            {(new Date(war.endTime)).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "medium" })}
                         </span>
                     </div>
                     <div className="leaderBoard">
-                    <div className="warPlayer">
-                        <div className="title">Member</div>
-                        <div className="title">Attacks</div>
-                        <div className="title">Score</div>
-                    </div>
-                    {
-                        warMembers
-                        .sort( function(a,b) {
-                            return b.score - a.score;
-                        })
-                        .map((member: any, index: number) => {
-                            return <WarPlayer player={member} key={index} />;
-                        })
-                    }
+                        <div className="warPlayer">
+                            <div className="title">Member</div>
+                            <div className="title">Attacks</div>
+                            <div className="title">Score</div>
+                        </div>
+                        {
+                            warMembers
+                                .sort(function (a, b) {
+                                    return b.score - a.score;
+                                })
+                                .map((member: any, index: number) => {
+                                    return <WarPlayer player={member} key={index} />;
+                                })
+                        }
                     </div>
                 </div>
             </div>

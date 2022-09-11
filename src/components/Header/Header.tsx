@@ -30,10 +30,10 @@ const Header: FC = () => {
       });
   }
 
-  useEffect(() => {
-    getLoginURL();
-    getMe();
-  }, []);
+  // useEffect(() => {
+  //   getLoginURL();
+  //   getMe();
+  // }, []);
 
   const navigateToHome = () => {
     navigate("/");

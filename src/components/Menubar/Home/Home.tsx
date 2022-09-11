@@ -15,12 +15,14 @@ const Home = () => {
   const handleGameSelect = (gameId: number) => {
     setGame(info.games[gameId]);
   };
+  const backendUrl = "https://mysterious-beyond-28283.herokuapp.com";
+  // const backendUrl = "http://localhost:8890";
   const [clan, setClan] = useState({} as any);
   const [clanLink, setClanLink] = useState("");
   const [cocPlayerList, setCOCPlayerList] = useState([] as any[]);
   useEffect(() => {
     async function getMyPlayers() {
-      return await axios.post("https://mysterious-beyond-28283.herokuapp.com/common/fetchAllPlayersDetails", {
+      return await axios.post(`${backendUrl}/common/fetchAllPlayersDetails`, {
         "clan": "ckzo"
       }, {
         withCredentials: true,

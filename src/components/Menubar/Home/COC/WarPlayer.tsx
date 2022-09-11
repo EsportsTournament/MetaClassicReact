@@ -8,12 +8,13 @@ function WarPlayer(props: any) {
                 {props.player.pos}. {props.player.name}
             </div>
             <div className="attacks">
-                {props.player.attacks.map( (attack: any, index: number) => {
+                {props.player.attacks.map((attack: any, index: number) => {
                     return <div className="attack" key={index}>
-                        {attack.stars === 3 ? 
-                         <img src={require("./../../../../assets/images/th/_3.webp")} alt="town hall iamge" />
-                       :  <img src={require(`./../../../../assets/images/th/${attack.defenderTh}_${attack.stars}.webp`)} alt="town hall iamge" />
-                    }
+                        {attack.stars === 3 ?
+                            <img src={require("./../../../../assets/images/th/_3.webp")} alt="town hall iamge" />
+                            : attack.stars === 0 ? <img src={require(`./../../../../assets/images/th/${attack.defenderTh}.webp`)} alt="town hall iamge" /> :
+                                <img src={require(`./../../../../assets/images/th/${attack.defenderTh}_${attack.stars}.webp`)} alt="town hall iamge" />
+                        }
                         {attack.defenderMapPosition}. {attack.defenderName}
                     </div>;
                 })}
