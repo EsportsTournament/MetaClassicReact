@@ -42,7 +42,7 @@ const Header: FC = () => {
   return (
     <div className="header" data-testid="Header">
       <div className="mt-pointer" onClick={navigateToHome}>
-        <img className="logo" src={bgImg} alt="Logo" />
+        <img loading="lazy" className="logo" src={bgImg} alt="Logo" />
       </div>
       <div className="title mt-pointer" onClick={navigateToHome}>{appName}</div>
       <div className="glass-button login">

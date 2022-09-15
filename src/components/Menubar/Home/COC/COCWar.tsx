@@ -32,11 +32,11 @@ function COCWar() {
                     <div className="title">
                         <span className="titleBadge">
                             {war.clan.name}
-                            <img className="mt-badgeImage" src={war.clan.badge.url} alt="Clan Badge Image" />
+                            <img loading="lazy" className="mt-badgeImage" src={war.clan.badge.url} alt="Clan Badge Image" />
                         </span>
                         <span>VS</span>
                         <span className="titleBadge">
-                            <img className="mt-badgeImage" src={war.opponent.badge.url} alt="Opponent Badge Image" />
+                            <img loading="lazy" className="mt-badgeImage" src={war.opponent.badge.url} alt="Opponent Badge Image" />
                             {war.opponent.name}
                         </span>
                     </div>

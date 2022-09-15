@@ -28,7 +28,7 @@ function COCClan(props: any) {
   return (
     <div className="mt-card">
       <div className="mt-cardTitle">
-        <img className="mt-badgeImage" src="https://api-assets.clashofclans.com/badges/512/SfewAMajmC1nKwju4MMzp91hmJw8K677Vg7nOCfZubU.png" alt="Clan Badge Image" />
+        <img loading="lazy" className="mt-badgeImage" src="https://api-assets.clashofclans.com/badges/512/SfewAMajmC1nKwju4MMzp91hmJw8K677Vg7nOCfZubU.png" alt="Clan Badge Image" />
         <div className="nameTag">
           <div className="clanName">
           {props.clan.name}
@@ -44,7 +44,7 @@ function COCClan(props: any) {
           <div className="mt-cardValues">
             {
               props.clan.labels.map( (label: any, index: number) => {
-                return <img key={index} className="labelIcon" src={label.icon.url} alt="label image" />;
+                return <img loading="lazy" key={index} className="labelIcon" src={label.icon.url} alt="label image" />;
               })
             }
           </div> : <>bla</>}

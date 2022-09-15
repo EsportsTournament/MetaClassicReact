@@ -9,7 +9,7 @@ function Player(props: any) {
                 <div className="mt-player-left">
                     <div className="profilePic">
                         {props.profile.image !== "" ?
-                            <img className="profileImage" src={props.profile.image} alt="profile image" />
+                            <img loading="lazy" className="profileImage" src={props.profile.image} alt="profile image" />
                             : <><RiAccountCircleFill /> </>}
                     </div>
                     <div className="mt-player-cardTitle">{props.profile.name}</div>

@@ -8,7 +8,7 @@ function COCPlayer(props: any) {
                 <div className="mt-player-left">
                     <div className="profilePic">
                         {props.profile.league.name !== "" ?
-                            <img className="profileImage" src={props.profile.league.icon.url} alt="leauge image" />
+                            <img loading="lazy" className="profileImage" src={props.profile.league.icon.url} alt="leauge image" />
                             : <><RiAccountCircleFill /> </>}
                     </div>
                     <div className="mt-player-cardTitle">{props.profile.name}</div>
@@ -24,7 +24,7 @@ function COCPlayer(props: any) {
                         <div className="mt-player-cardValues">
                             <span className="mt-player-cardkey">TH:</span>
                             <div className="mt-player-cardValue ">
-                                <img src={require(`./../../../../assets/images/th/${props.profile.townHallLevel}.webp`)} alt="town hall iamge" />
+                                <img loading="lazy" src={require(`./../../../../assets/images/th/${props.profile.townHallLevel}.webp`)} alt="town hall iamge" />
                                 {props.profile.townHallLevel}
                             </div>
                         </div> : <></>}
@@ -32,7 +32,7 @@ function COCPlayer(props: any) {
                         <div className="mt-player-cardValues">
                             <span className="mt-player-cardkey">BH:</span>
                             <div className="mt-player-cardValue ">
-                                <img src={require(`./../../../../assets/images/bh/${props.profile.builderHallLevel}.webp`)} alt="builder hall iamge" />
+                                <img loading="lazy" src={require(`./../../../../assets/images/bh/${props.profile.builderHallLevel}.webp`)} alt="builder hall iamge" />
                                 {props.profile.builderHallLevel}
                             </div>
                         </div> : <></>}
@@ -50,7 +50,7 @@ function COCPlayer(props: any) {
                     <div className="mt-social-cardChips">
                         {props.profile.labels.map((label: any, index: number) => {
                             return <div className="mt-social-chip" key={index}>
-                                <img className="labelIcon" src={label.icon.url} alt="label image" />
+                                <img loading="lazy" className="labelIcon" src={label.icon.url} alt="label image" />
                                 {label.name}
                             </div>;
                         })}
