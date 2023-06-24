@@ -7,14 +7,14 @@ export const GlobalStyle = createGlobalStyle`
 body,html {
     margin: 0;
     padding: 0;
-    --color-primary: rgb(34, 193, 185);
-    --color-secondary: rgb(196, 247, 247);
-    --color-complementary: rgb(23, 93, 32);
+    --color-primary: white;
+    --color-secondary: black;
+    --color-complementary: cyan;
     --color-white: white;
     --color-black: black;
     --border-radius: 10px;
     --padding: 6px 10px;
-    --border: 2px solid var(--color-secondary);
+    --border: 2px solid var(--color-complementary);
     --h1: 12px 12px;
     --v1: 16px 0;
     --h2: -8px -8px;

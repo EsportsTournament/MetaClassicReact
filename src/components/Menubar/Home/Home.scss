@@ -75,16 +75,19 @@
 .bgWar {
     overflow: auto;
     position: relative;
+    color: white;
 }
 
 .bgCoc::before {
     @include before-blur;
-    background-image: url('https://images.unsplash.com/photo-1553356009-50faee7aa84c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JlZW4lMjBhbmQlMjB5ZWxsb3d8ZW58MHx8MHx8&auto=format&fit=crop&w=1296&q=60');
+    background: black;
+    // background-image: url('https://images.unsplash.com/photo-1553356009-50faee7aa84c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JlZW4lMjBhbmQlMjB5ZWxsb3d8ZW58MHx8MHx8&auto=format&fit=crop&w=1296&q=60');
 }
 
 .bgWar::before {
     @include before-blur(0px);
-    background-image: url('https://cdn.discordapp.com/attachments/830882773367259196/845716122276069376/unknown.png');
+    background: black;
+    // background-image: url('https://cdn.discordapp.com/attachments/830882773367259196/845716122276069376/unknown.png');
 }
 
 .bgBgmi {
